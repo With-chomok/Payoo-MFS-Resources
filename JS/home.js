@@ -27,10 +27,7 @@ document.getElementById('add-button')
         document.getElementById('add-money-parent').style.display = 'block'
 
  })
-        // document.getElementById('transfer-money-parent').style.display = 'block';
-        // document.getElementById('get-bonus-parent').style.display = 'block';
-        // document.getElementById('pay-bill-parent').style.display = 'block';
-   
+        
 
 document.getElementById('cashout-button')
     .addEventListener('click', function(){
@@ -81,3 +78,18 @@ document.getElementById('cashout-button')
         document.getElementById('pay-bill-parent').style.display = 'block'
 
  })
+
+
+document.getElementById('cashout-money-btn').addEventListener('click', function (e){
+    e.preventDefault();
+
+
+    const cashoutAmount = parseInt(document.getElementById('cashoutAmount').value)
+
+   const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+
+   const totalcashout = availableBalance - cashoutAmount;
+   
+   document.getElementById("available-balance").innerText = totalcashout;
+   
+})
