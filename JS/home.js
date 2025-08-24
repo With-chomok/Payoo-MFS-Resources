@@ -1,3 +1,5 @@
+const validPin = 1234;
+
 document.getElementById('add-money-btn')
     .addEventListener('click', function(e){
         e.preventDefault();
@@ -5,15 +7,28 @@ document.getElementById('add-money-btn')
         const bank = document.getElementById('bank').value 
         const accountNumber = document.getElementById('bank-account').value 
         const addAmount = parseInt(document.getElementById('add-amount').value) 
-        const addPin = document.getElementById('add-pin').value 
+        const addPin = parseInt(document.getElementById('add-pin').value) 
         // console.log(bank, accountNumber, addAmount, addPin);
         
       
         const availableBalance = parseInt(document.getElementById('available-balance').innerText)
-    
+        
+        if(accountNumber.length < 11){
+            alert("Invalid Account Number");
+            return
+        }
+        if(addPin !== validPin){
+            alert("Invalid Pin Number");
+            return
+        }
+
         const totalBalance = addAmount + availableBalance;
         document.getElementById('available-balance').innerText = totalBalance
     })
+
+
+
+    
 
 // trogolling features 
 
