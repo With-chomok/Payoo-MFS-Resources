@@ -40,7 +40,7 @@
     />
   </head>
 
-  <body class="bg-[#f4f5f7] h-[100vh] font-outfit">
+  <body class="bg-[#f4f5f7] h-min-[100vh] font-outfit">
     
 
     <div class="max-w-lg mx-auto bg-white rounded-b-xl">
@@ -74,43 +74,44 @@
         </p>
       </div>
 
-      <div class="min-h-[200px] grid grid-cols-3 gap-4 mt-6 p-3">
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+      <div class="min-h-[200px] grid grid-cols-3 gap-4 mt-6 p-3 ">
+        <div id="add-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/wallet1.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Add Money</h2>
         </div>
 
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="cashout-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/cashout.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Cashout</h2>
         </div>
 
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="transfer-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/money1.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Transfer Money</h2>
         </div>
 
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="bonus-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/bonus1.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Get Bonus</h2>
         </div>
 
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="pay-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/paybill.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Pay Bill</h2>
         </div>
 
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="transaction-button" class="border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer hover:bg-indigo-200">
           <img src="../assets/transaction1.png" class="mx-auto" alt="" />
           <h2 class="text-[#080808b3]">Transactions</h2>
         </div>
       </div>
     </div>
     <!-- frm section  -->
+     <div class="all-form-sections max-w-lg mx-auto border-2">
 
-                        <div class="all-form-sections max-w-lg mx-auto border-2">
-      <!-- add money  -->
-      <div>
+
+        <!-- add money  -->
+      <div id="add-money-parent">
         <h1 class="my-5 font-bold">Add Money</h1>
         <form action="" class="bg-[#ffffff] p-8 rounded-3xl ">
           <div class="mb-3">
@@ -158,8 +159,8 @@
         </form>
       </div>
 
-                             <!-- cashout card  section -->
-       <div class="">
+        <!-- cashout card  section -->
+       <div id="cash-out-parent">
         <h1 class="my-5 font-bold">Cash Out</h1>
 
         <form action="" class="bg-[#ffffff] p-8 rounded-3xl ">
@@ -197,9 +198,8 @@
            <button type="button" id="add-money-btn"  class="btn bg-[#0874f2] mt-3 rounded-[32px] w-full text-[#FFFFFF]">Withdraw Money</button>
        </div>
 
-<!-- Transfer Money section -->
-       <div class="border-2">
-
+        <!-- Transfer Money section -->
+       <div id="transfer-money-parent">
         <h1 class="my-5 font-bold">Transfer Money</h1>
 
         <form action="" class="bg-[#ffffff] p-8 rounded-3xl ">
@@ -239,7 +239,7 @@
        </div>
 
         <!-- Get Bonus card section  -->
-         <div>
+         <div id="get-bonus-parent">
 
         <h1 class="my-5 font-bold">Get Bonus</h1>
 
@@ -259,10 +259,8 @@
            <button type="button" id="add-money-btn"  class="btn bg-[#0874f2] mt-3 mb-3 rounded-[32px] w-full text-[#FFFFFF]">Get Bonus</button>
        
        </div>
-  
-
-<!-- pay bill section card  -->
-       <div>
+        <!-- pay bill section card  -->
+       <div id="pay-bill-parent">
         <h1 class="my-5 font-bold">Pay Bill</h1>
         <form action="" class="bg-[#ffffff] p-8 rounded-3xl ">
           <div class="mb-3">
@@ -321,6 +319,8 @@
            <button type="button" id="add-money-btn"  class="btn bg-[#0874f2] mt-3 rounded-[32px] w-full text-[#FFFFFF]">Pay Now</button>
         </form>
       </div>
+
+
     </div>
     <script src="../JS/home.js"></script>
   </body>
