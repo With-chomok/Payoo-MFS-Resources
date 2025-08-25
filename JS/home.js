@@ -1,11 +1,17 @@
 const validPin = 1234;
 const validNum = 12345678910;
-
 // function get input number 
 function getInputvalue(id){
   const inputFieldValue = parseInt(document.getElementById(id).value)
   return inputFieldValue;
 }
+
+function getInputValue(id){
+  const inputFieldValues = document.getElementById(id).value
+  return inputFieldValues;
+}
+
+
 
 
 
@@ -14,16 +20,15 @@ document.getElementById("add-money-btn")
   .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const bank = document.getElementById("bank").value;
+    const bank = getInputValue("bank");
     const accountNumber = getInputvalue('bank-account');
     const addAmount = getInputvalue("add-amount");
     const addPin = getInputvalue("add-pin");
     // console.log(bank, accountNumber, addAmount, addPin);
 
     const availableBalance = parseInt(
-      document.getElementById("available-balance").innerText
-    );
-
+      document.getElementById("available-balance").innerText);
+    
     if (accountNumber.length < 11) {
       alert("Invalid Account Number");
       return;
@@ -39,17 +44,27 @@ document.getElementById("add-money-btn")
 
 // cashout event check velidity pin and number section
 
+
+
+
 document
   .getElementById("cashout-money-btn")
   .addEventListener("click", function (e) {
     e.preventDefault();
-    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
-    const agentNumber = document.getElementById("Agent-Number").innerText;
+
+    
+    
+    const agentNumber = getInputvalue("Agent-Number");
     const withdrawPin = getInputvalue("withdraw-pin");
     const withdrawAmount = getInputvalue("cashout-amount");
-   if (agentNumber.length < 11 && agentNumber.length !== validNum) {
+    
+    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+
+   if (agentNumber.toString().length < 11 || agentNumber !== validNum) {
       alert("Invalid Account Number");
       return;
+      
+      
     }
     if (withdrawPin !== validPin) {
       alert("Invalid Pin Number");
@@ -112,20 +127,3 @@ document.getElementById("pay-button").addEventListener("click", function () {
   document.getElementById("pay-bill-parent").style.display = "block";
 });
 
-document
-  .getElementById("cashout-money-btn")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const cashoutAmount = parseInt(
-      document.getElementById("cashoutAmount").value
-    );
-
-    const availableBalance = parseInt(
-      document.getElementById("available-balance").innerText
-    );
-
-    const totalcashout = availableBalance - cashoutAmount;
-
-    document.getElementById("available-balance").innerText = totalcashout;
-  });
