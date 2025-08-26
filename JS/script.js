@@ -19,7 +19,7 @@ document.getElementById('btn-login')
             return
         }
         if(mobileNumberValueConverted === mobileNumber && pinNumberValueConverted === pinNumber ){
-            window.location.href = '../docs/home.html'
+            window.location.href = 'home.html'
             
         }else{
            alert('Invalid Credential')
