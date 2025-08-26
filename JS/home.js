@@ -147,3 +147,7 @@ document.getElementById("pay-button").addEventListener("click", function () {
 displayEle("pay-bill-parent");
 btnHandleEle("pay-button")
 });
+document.getElementById("transaction-button").addEventListener("click", function(){
+  displayEle("transaction-parent");
+  btnHandleEle("transaction-button")
+})
