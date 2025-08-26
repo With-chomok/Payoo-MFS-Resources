@@ -14,7 +14,10 @@ document.getElementById('btn-login')
 
         
         // console.log(typeof mobileNumberValueConverted,typeof pinNumberValueConverted);
-        
+        if(isNaN(mobileNumberValueConverted) || isNaN(pinNumberValueConverted) ){
+            alert("Empty credential")
+            return
+        }
         if(mobileNumberValueConverted === mobileNumber && pinNumberValueConverted === pinNumber ){
             window.location.href = '../html/home.html'
             
