@@ -107,7 +107,7 @@ function displayEle(id){
 function btnHandleEle(id){
   const formBtns = document.getElementsByClassName("form-btn")
  for(btn of formBtns){
-  btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+  btn.classList.remove("border-[#0874f2]", "bg-[#0874f233]")
   btn.classList.add("border-gray-300")
   
  }
